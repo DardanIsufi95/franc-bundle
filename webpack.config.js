@@ -6,20 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'franc.min.js',
-    library: {
-      name: 'franc',
-      type: 'umd',
-      export: 'default',
-    },
+    library: 'franc',
+    libraryTarget: 'umd',
+    libraryExport: 'default',
     globalObject: 'this',
-  },
-  externals: {
-    'franc': {
-      commonjs: 'franc',
-      commonjs2: 'franc',
-      amd: 'franc',
-      root: 'franc'
-    }
   },
   resolve: {
     extensions: ['.js'],
