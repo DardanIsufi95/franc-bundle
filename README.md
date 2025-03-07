@@ -17,7 +17,7 @@ npm install @dardanisufi95/franc-bundle
 ### CDN (unpkg)
 
 ```html
-<script src="https://unpkg.com/@dardanisufi95/franc-bundle@1.0.0/dist/franc.min.js"></script>
+<script src="https://unpkg.com/@dardanisufi95/franc-bundle@1.0.1/dist/franc.min.js"></script>
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ Include the bundle in your HTML:
 ```html
 <script src="node_modules/@dardanisufi95/franc-bundle/dist/franc.min.js"></script>
 <!-- Or use the CDN version -->
-<script src="https://unpkg.com/@dardanisufi95/franc-bundle@1.0.0/dist/franc.min.js"></script>
+<script src="https://unpkg.com/@dardanisufi95/franc-bundle@1.0.1/dist/franc.min.js"></script>
 ```
 
 Then you can use the franc function:

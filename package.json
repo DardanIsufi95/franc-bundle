@@ -1,6 +1,6 @@
 {
   "name": "@dardanisufi95/franc-bundle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/franc.min.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
