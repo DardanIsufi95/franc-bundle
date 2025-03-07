@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Franc Language Detection Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+      padding: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #result {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Franc Language Detection</h1>
+  <p>Enter some text below to detect the language:</p>
+  
+  <textarea id="textInput" placeholder="Enter text here...">This is a sample text in English to detect the language.</textarea>
+  <button id="detectBtn">Detect Language</button>
+  
+  <div id="result">Result will appear here...</div>
+  
+  <!-- Include the bundled franc library -->
+  <script src="https://unpkg.com/@dardanisufi95/franc-bundle@1.0.0/dist/franc.min.js"></script>
+  
+  <script>
+    document.getElementById('detectBtn').addEventListener('click', function() {
+      const text = document.getElementById('textInput').value;
+      
+      if (text.trim() === '') {
+        document.getElementById('result').textContent = 'Please enter some text.';
+        return;
+      }
+      
+      // Use the franc library to detect the language
+      const languageCode = franc(text);
+      
+      // Display the result
+      document.getElementById('result').textContent = `Detected language code: ${languageCode}`;
+      
+      // For extended information, you could add a mapping of language codes to full names
+      const languageNames = {
+        'eng': 'English',
+        'spa': 'Spanish',
+        'fra': 'French',
+        'deu': 'German',
+        'ita': 'Italian',
+        'por': 'Portuguese',
+        'rus': 'Russian',
+        'jpn': 'Japanese',
+        'zho': 'Chinese',
+        'ara': 'Arabic',
+        // Add more as needed
+      };
+      
+      if (languageNames[languageCode]) {
+        document.getElementById('result').textContent += ` (${languageNames[languageCode]})`;
+      }
+    });
+  </script>
+</body>
+</html> 
